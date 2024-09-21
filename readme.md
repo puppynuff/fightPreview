@@ -17,3 +17,11 @@
 | Persona 4 Arena ultimax          | 0/22                           | No       |
 
 ## GUI is planned. Currently only supports the terminal.
+
+## Required dependancies
+https://github.com/nefarius/ViGEmBus/releases/tag/v1.22.0
+</br> Yes I know its reached the end of life, but its also still working so if I can use than instead of making my own driver count me in!
+
+## Working Operating systems?
+Windows
+</br> The driver doesnt work on Linux or mac :sob:

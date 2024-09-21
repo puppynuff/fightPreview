@@ -14,12 +14,13 @@ export class Terminal {
         this.selected_option = 0;
     }
 
-    selectMenu (options : Array<string>, finish_function: (selected_text: string) => any) {
+    selectMenu (options : Array<string>, finish_function: (selected_text: string) => any, log_text: string = "") {
         this.selected_option = 0;
         
         let break_process = false;
         
         let render_options = () => {
+            if(log_text != "") console.log(log_text);
             for(let i = 0; i < options.length; i++) {
                 if(i == this.selected_option) {
                     console.log(colors.inverse(options[i]));
@@ -31,7 +32,7 @@ export class Terminal {
 
 
         render_options();
-        let process_function = (chunk: any, key: any) => {
+        let process_function = (_chunk: any, key: any) => {
             if(break_process == true) {
                 process.stdin.removeListener("keypress", process_function);
                 return;
